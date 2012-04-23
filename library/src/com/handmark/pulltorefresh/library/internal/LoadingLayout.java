@@ -125,6 +125,10 @@ public class LoadingLayout extends FrameLayout {
 		mSubHeaderText.setTextColor(color);
 	}
 	
+	public void setPullImage(int resId) {
+		mHeaderImage.setImageResource(resId);
+	}
+	
 	public void setSubHeaderText(String text) {
 		mSubHeaderText.setText(Html.fromHtml(text));
 		if (TextUtils.isEmpty(text)) {
