@@ -11,6 +11,10 @@
             <flag name="both" value="0x3" />
         </attr>
         <attr name="ptrPullHeaderImage" format="reference"/>
+        <attr name="ptrHeaderTextSize" format="reference|dimension"/>
+        <attr name="ptrSubHeaderTextSize" format="reference|dimension"/>
+        <attr name="ptrHeaderFont" format="string"/>
+        <attr name="ptrSubHeaderFont" format="string"/>
     </declare-styleable>
 
 </resources>

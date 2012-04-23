@@ -3,6 +3,7 @@ package com.handmark.pulltorefresh.library.internal;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Color;
+import android.graphics.Typeface;
 import android.text.Html;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
@@ -74,6 +75,24 @@ public class LoadingLayout extends FrameLayout {
 		if (attrs.hasValue(R.styleable.PullToRefresh_ptrHeaderTextColor)) {
 			final int color = attrs.getColor(R.styleable.PullToRefresh_ptrHeaderTextColor, Color.BLACK);
 			setTextColor(color);
+		}
+		if (attrs.hasValue(R.styleable.PullToRefresh_ptrHeaderTextSize)) {
+			final float size = attrs.getDimension(R.styleable.PullToRefresh_ptrHeaderTextSize, 18.0F);
+			mHeaderText.setTextSize(size);
+		}
+		if (attrs.hasValue(R.styleable.PullToRefresh_ptrSubHeaderTextSize)) {
+			final float size = attrs.getDimension(R.styleable.PullToRefresh_ptrSubHeaderTextSize, 12.0F);
+			mSubHeaderText.setTextSize(size);
+		}
+		if (attrs.hasValue(R.styleable.PullToRefresh_ptrHeaderFont)) {
+			final String font = attrs.getString(R.styleable.PullToRefresh_ptrHeaderFont);
+			final Typeface tf = Typeface.createFromAsset(getContext().getAssets(), String.format("fonts/%s", font));
+			mHeaderText.setTypeface(tf);
+		}
+		if (attrs.hasValue(R.styleable.PullToRefresh_ptrSubHeaderFont)) {
+			final String font = attrs.getString(R.styleable.PullToRefresh_ptrSubHeaderFont);
+			final Typeface tf = Typeface.createFromAsset(getContext().getAssets(), String.format("fonts/%s", font));
+			mSubHeaderText.setTypeface(tf);
 		}
 	}
 
