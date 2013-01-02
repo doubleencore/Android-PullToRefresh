@@ -7,11 +7,10 @@ gen
 .settings
 
 #IntelliJ IDEA
-.idea
-*.iml
-*.ipr
-*.iws
 out
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/dictionaries
 
 #Maven
 target
