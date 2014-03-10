@@ -1,25 +1,28 @@
-#Android generated
+# Ant
 bin
 gen
+build.xml
+ant.properties
+local.properties
 
-#Eclipse
-.classpath
-.settings
+# OSX Noise
+.DS_Store
+tmp
 
-#IntelliJ IDEA
+# IntelliJ idea
 out
-.idea/workspace.xml
-.idea/tasks.xml
-.idea/dictionaries
+.idea
+*.iml
+*.ipr
+*.iws
+classes
 
-#Maven
+# Gradle
+build
+.gradle
+
+# Maven
 target
 release.properties
 pom.xml.*
 
-#Ant
-local.properties
-proguard.cfg
-
-#OSX
-.DS_Store
